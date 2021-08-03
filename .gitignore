@@ -1,0 +1,8 @@
+# .gitignore for C, JetBrains and macOS
+.idea
+cmake-build-*/
+.DS_Store
+
+# Custom
+build/
+.cannotseeme
