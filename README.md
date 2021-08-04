@@ -29,3 +29,6 @@ Options:
   -d, --delay <int>          delay between each hop (default: 200)
   -t, --timeout <int>        exit the program after X seconds (default: 0)
 ```
+
+## Other languages
+Go: https://github.com/giacomoferretti/chopper-go
