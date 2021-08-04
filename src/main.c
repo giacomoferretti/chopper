@@ -95,10 +95,9 @@ int main(int argc, char *argv[]) {
                 break;
             case 'c':
                 channels_num = parse_channels_string(&channels, optarg);
-                if (channels != NULL) {
-                    for (size_t i = 0; i < channels_num; i++) {
-                        printf("%d\n", channels[i]);
-                    }
+                if (channels_num <= 0) {
+                    fprintf(stderr, "ERROR: cannot parse channels.\n");
+                    return EXIT_FAILURE;
                 }
                 break;
             case 'd':

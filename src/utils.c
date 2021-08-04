@@ -78,7 +78,7 @@ int ieee80211_frequency_to_channel(int freq) {
         return 0;
 }
 
-int parse_channels_string(int **dst, char *src) {
+size_t parse_channels_string(int **dst, char *src) {
     size_t length = strlen(src);
 
     *dst = malloc(sizeof(int) * length);
@@ -86,7 +86,7 @@ int parse_channels_string(int **dst, char *src) {
         return -1;
     }
 
-    int idx = 0;
+    size_t idx = 0;
     char *ptr = strtok(src, ",");
     while (ptr != NULL) {
         (*dst)[idx] = (int) strtol(ptr, NULL, 10);
